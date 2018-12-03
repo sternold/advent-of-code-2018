@@ -53,7 +53,6 @@ namespace day.three
             var fabric = new int[1000, 1000];
             foreach (var claim in claims)
             {
-                Console.WriteLine($"Parsing {claim.Id}...");
                 for (int x = claim.X; x < claim.X2; x++)
                 {
                     for (int y = claim.Y; y < claim.Y2; y++)
@@ -83,7 +82,7 @@ namespace day.three
             var fabric = GetClaimedFabric(claims);
             foreach (var claim in claims)
             {
-                bool clash = false;
+                var clash = false;
                 for (int x = claim.X; x < claim.X2; x++)
                 {
                     for (int y = claim.Y; y < claim.Y2; y++)
